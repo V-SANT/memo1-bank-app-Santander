@@ -41,13 +41,6 @@ public class AccountService {
     }
 
     public void deleteById(Long cbu) {
-
-        Collection<Transaction> transactions = transactionService.findAllByCbu(cbu);
-
-        for (Transaction transaction : transactions) {
-            transactionService.deleteById(transaction.getId());
-        }
-
         accountRepository.deleteById(cbu);
     }
 
