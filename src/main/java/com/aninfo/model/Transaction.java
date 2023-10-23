@@ -18,6 +18,26 @@ public abstract class Transaction {
         return cbu;
     }
 
+    public void setCbu(Long cbu) {
+        this.cbu = cbu;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public TransactionType getType() {
+        return type;
+    }
+
     @JsonIgnore
     public Double getAmountAfterDeletion() {
         return 0.0;
